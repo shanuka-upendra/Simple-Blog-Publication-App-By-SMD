@@ -1,7 +1,5 @@
 # Simple-Blog-Publication-App-By-SMD
 
-# Blog Publication App
-
 A simple blog application built with Next.js, Supabase, and Stripe.
 
 ## Features
