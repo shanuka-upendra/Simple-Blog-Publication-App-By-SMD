@@ -4,8 +4,8 @@
 
 ### Setup
 
-* [ ] Create Next.js project
-* [ ] Setup Supabase
+* [/] Create Next.js project
+* [/] Setup Supabase
 * [ ] Configure Authentication
 
 ### UI
