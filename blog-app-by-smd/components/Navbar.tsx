@@ -3,15 +3,15 @@ import Link from "next/dist/client/link";
 
 
 export default async function Navbar() {
-    const supabase = createClient();
-    const {data: {user}} = await supabase.auth.getUser();
+  const supabase = createClient();
+  const { data: { user } } = await supabase.auth.getUser();
 
-    return (
+  return (
     <nav className="border-b-4 border-black p-4 flex justify-between items-center bg-white">
       <Link href="/" className="font-bold text-2xl tracking-tight">
         Simple Blog App<span className="text-blue-600">By SMD</span>
       </Link>
-      
+
       <div className="flex gap-4 items-center font-semibold">
         {user ? (
           <>
