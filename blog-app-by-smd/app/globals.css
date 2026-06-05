@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  /* Set the off-white color as the default light mode background */
+  --background: #f4f4f0;
   --foreground: #171717;
 }
 
@@ -15,12 +16,29 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #d02020;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    /* Apply the dynamic theme variables instead of hardcoded hex values */
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .brutal-shadow {
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .brutal-shadow:hover {
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+    transform: translate(-2px, -2px);
+  }
+
+  .brutal-border {
+    @apply border-2 border-black;
+  }
 }
